@@ -1,0 +1,192 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Author     : Admin
+*/
+body {
+    background-color: #e1e1ea !important;
+    display: grid;
+    min-height: 100vh;
+}
+
+.banner{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.text-gradient {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-masthead .nav-link {
+    color: black;
+    border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    color: blue;
+    border-bottom-color: black;
+}
+
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 6px;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.card-register {
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff;
+}
+
+
+.is-flex {
+    display: flex!important;
+}
+.is-align-items-center {
+    align-items: center!important;
+}
+.is-justify-content-space-between {
+    justify-content: space-between!important;
+}
+
+.boxReview .boxReview-comment .boxReview-comment-item-review {
+    width: calc(100% - 40px);
+    background-color: #f3f4f6;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.boxReview .boxReview-comment .boxReview-comment-item-review {
+    width: calc(100% - 40px);
+    background-color: #f3f4f6;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.p-2 {
+    padding: 0.5rem!important;
+}
+.my-2 {
+    margin-top: 0.5rem!important;
+    margin-bottom: 0.5rem!important;
+}
+
+.boxReview .boxReview-comment .boxReview-comment-item-title .date-time {
+    color: #707070;
+    font-size: 12px;
+    font-weight: 600;
+}
+.boxReview .boxReview-comment .boxReview-comment-item-title .date-time {
+    color: #707070;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.boxReview-comment-item-review {
+    border-radius: 10px;
+}
+.stattable{
+    position: relative;
+    height: 37%;
+    overflow: auto;
+}
+.acolor{
+    color: #7a868f;
+}
+.sizeloaimonindex{
+    width: 260px !important;
+    height: 230px !important;
+}
+.img-thumbnail{
+    width: 120px !important;
+    height: 110px !important;
+}
+.toggle-on{
+    text-align: left;
+}
+.toggle-off{
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
