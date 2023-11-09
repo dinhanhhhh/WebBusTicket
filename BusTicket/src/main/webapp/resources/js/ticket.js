@@ -95,9 +95,9 @@ function cancelTicket(ticketId) {
 //    fetch(`/BusTicket/api/tickets/${ticketId}`, {
 //        method: 'delete'
 //    })
-   if (confirm("Bạn có chắc chắn muốn xóa?") === true) {
+    if (confirm("Bạn có chắc chắn muốn xóa?") === true) {
         fetch(`/BusTicket/api/tickets/${ticketId}`, {
-                method: 'delete'
+            method: 'delete'
         }).then(function (res) {
             if (res.status === 204) {
                 location.reload();
@@ -110,10 +110,6 @@ function cancelTicket(ticketId) {
         alert('Bạn vẫn chưa muốn xóa!');
     }
 }
-
-
-
-
 
 function getSeats(idCoach) {
     fetch(`/BusTicket/api/seats/${idCoach}`)
@@ -317,6 +313,7 @@ function getTicketBookDetail(idTicket) {
                         <tr>
                             <th></th>
                             <td>
+                                <button class="btn btn-danger" onclick="cancelTicket(${data[i].id})">Hủy vé</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </td>
                         </tr>`;

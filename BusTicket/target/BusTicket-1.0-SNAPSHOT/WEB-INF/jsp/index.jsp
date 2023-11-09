@@ -21,11 +21,14 @@
         </p>
     </c:if>
 
-    <ul class="pagination" style="margin: 15px">        
-        <li class="page-item"><a class="page-link" href="<c:url value="/"/>?page=1">1</a></li> 
-        <li class="page-item"><a class="page-link" href="<c:url value="/"/>?page=2">2</a></li> 
-        <li class="page-item"><a class="page-link" href="<c:url value="/"/>?page=3">3</a></li>
+    <ul class="pagination" style="margin: 15px">
+        <c:forEach begin="1" end="10" var="pageNumber">
+            <li class="page-item">
+                <a class="page-link" href="<c:url value="/"/>?page=${pageNumber}">${pageNumber}</a>
+            </li>
+        </c:forEach>
     </ul>
+
 
     <div class="container">
         <div class="row" style="margin-top: 10px">

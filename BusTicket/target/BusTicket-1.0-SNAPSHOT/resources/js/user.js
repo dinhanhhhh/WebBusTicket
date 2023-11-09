@@ -95,9 +95,9 @@ function editUser(id) {
 function deleteUser(endpoint, id) {
     if (confirm("Bạn có chắc chắn muốn xóa?") === true) {
         fetch(endpoint, {
-                method: 'delete'
+                method: 'post'
         }).then(function (res) {
-            if (res.status === 204) {
+            if (res.status === 204 || res.status === 200) {
                 location.reload();
                 alert('Bạn đã xóa thành công');
             }
@@ -116,8 +116,9 @@ function getUsers(endpoint) {
         let d = document.getElementById("myUser");
         if (d !== null) {
             let h = "";
+//            console.log(data);
             for (let i = 0; i < data.length; i++)
-                if (data[i].active === true) {
+                if (data[i].active === true && data[i].isDeleted === false) {
                     h += `
                             <tr>
                                 <td>${i + 1}</td>

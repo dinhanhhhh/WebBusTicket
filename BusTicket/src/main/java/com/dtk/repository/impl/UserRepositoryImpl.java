@@ -59,7 +59,9 @@ public class UserRepositoryImpl implements UserRepository {
 
         try {
             User u = session.get(User.class, id);
-            session.delete(u);
+            u.setIsDeleted(true);
+            
+            session.update(u);
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -99,6 +101,9 @@ public class UserRepositoryImpl implements UserRepository {
                         String.format("%%%s%%", kw));
                 predicates.add(p);
             }
+            
+//            Predicate checkDeleted = b.equal(root.get("isDeleted").as(Boolean.class), false);
+//            predicates.add(checkDeleted);
 
             q.where(predicates.toArray(new Predicate[]{}));
         }

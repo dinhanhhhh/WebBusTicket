@@ -108,7 +108,7 @@ public class User implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCustomer")
     @JsonIgnore
     private Set<Feedback> feedbackSet;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idDriver")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, mappedBy = "idDriver")
     @JsonIgnore
     private Set<Trip> tripSet;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCustomerNew")
@@ -126,6 +126,9 @@ public class User implements Serializable {
     @JsonIgnore
     private MultipartFile file;
     
+    @Column(name = "is_deleted")
+    private boolean isDeleted = false;
+
     public User() {
     }
 
@@ -141,6 +144,7 @@ public class User implements Serializable {
     public Integer getId() {
         return id;
     }
+    
 
     public void setId(Integer id) {
         this.id = id;
@@ -321,6 +325,20 @@ public class User implements Serializable {
      */
     public void setFile(MultipartFile file) {
         this.file = file;
+    }
+
+    /**
+     * @return the isDeleted
+     */
+    public boolean isIsDeleted() {
+        return isDeleted;
+    }
+
+    /**
+     * @param isDeleted the isDeleted to set
+     */
+    public void setIsDeleted(boolean isDeleted) {
+        this.isDeleted = isDeleted;
     }
 
 }

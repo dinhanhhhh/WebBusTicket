@@ -100,5 +100,5 @@
     <c:url value="/api/coaches" var="c"/>
     window.onload = function () {
         getCoaches('${c}');
-    }
+    };
 </script>
